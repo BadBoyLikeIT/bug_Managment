@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Bug Management System 1.0 | </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
+
   </head>
 
   <body class="login">
@@ -30,16 +32,18 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form id="login-form">
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" id="username1" name="username1" placeholder="Username" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" id="password1" name="password1" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <input type="submit" class="btn btn-default submit" value="Login"/>
+                <!--<a class="btn btn-default submit">Log in</a>-->
+                <!--这个a标签不能触发submit事件，所以js的东西一直没能调用-->
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
@@ -54,31 +58,49 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> Bug Management System 1.0</h1>
+                  <p>©2016 All Rights Reserved. This Is A Course Exercise!</p>
                 </div>
               </div>
             </form>
           </section>
         </div>
 
-        <div id="register" class="animate form registration_form">
+        <div  class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <form id="register-form">
               <h1>Create Account</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirm Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
+                <input type="text" class="form-control" id="worknum" name="worknum" placeholder="WorkNum" required="" />
               </div>
+              <div>
+                <h5 style="text-align:left">
+                  <span style="margin-right: 20px;">GroupOf:</span>
+                  <span style="margin-right: 25px;"><input type="radio"  name="groupof" value="test" >Test</span>
+                  <input type="radio"  name="groupof" value="develop">Develop
+                </h5>
 
+              </div>
+              <div>
+                <input type="text" class="form-control" id="department" name="department" placeholder="Department" required="" />
+              </div>
+              <div>
+                <input type="text" class="form-control" id="workdate" name="workdate" placeholder="Workdate" required="" />
+              </div>
+              <div>
+                <button class="btn btn-primary" type="reset">Reset</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <!--<button type="submit" class="btn btn-success" onclick="orderAlert('liuyang')">Submit</button>-->
+              </div>
               <div class="clearfix"></div>
 
               <div class="separator">
@@ -90,8 +112,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i>Bug Management System 1.0</h1>
+                  <p>©2016 All Rights Reserved. This Is A Course Exercise! </p>
                 </div>
               </div>
             </form>
@@ -99,5 +121,31 @@
         </div>
       </div>
     </div>
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--myFunctionJs-->
+    <script src="../funjs/jquery.prettyPhoto.js"></script>
+    <script src="../funjs/main.js"></script>
+    <script src="../funjs/com.fun.js"></script>
+    <script src="../funjs/login.js"></script>
+    <script src="../funjs/register.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+  <!--<script>-->
+    <!--function orderAlert(string) {-->
+<!--//一个alert库中的样式-->
+      <!--swal({-->
+        <!--title: string,-->
+        <!--type: "warning",-->
+        <!--showCancelButton: false,-->
+        <!--closeOnConfirm: false,-->
+        <!--showLoaderOnConfirm: true-->
+      <!--}//, function () {-->
+        <!--//location.href = "index.html"}-->
+      <!--);-->
+    <!--}-->
+  <!--</script>-->
+
   </body>
 </html>
