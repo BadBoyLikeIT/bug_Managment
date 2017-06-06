@@ -1,77 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55320ab4-3650-48b9-b979-cca0dad88c19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/Constant.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/connection.db.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/global.func.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/mysql.func.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/check.login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/login.con.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/project.submit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/register.con.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/com.fun.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/porject_submit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/register.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/project_submit.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/css/animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/css/docs.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/css/shCoreDefault.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/spinning.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_spinning.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/fonts/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/images/layout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/images/min_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/images/min_menu.tiff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/images/welcome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/images/welcome.tiff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/index_cn.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/js/shBrushXml.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/js/shCore.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/login.html" afterPath="$PROJECT_DIR$/production/login.html" />
-    </list>
+    <list default="true" id="55320ab4-3650-48b9-b979-cca0dad88c19" name="Default" comment="" />
     <ignored path="gentelella.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -426,7 +356,7 @@
       <workItem from="1496652451494" duration="3646000" />
       <workItem from="1496656515062" duration="3127000" />
       <workItem from="1496677085511" duration="462000" />
-      <workItem from="1496712513219" duration="17569000" />
+      <workItem from="1496712513219" duration="17865000" />
     </task>
     <task id="LOCAL-00001" summary="use other's html templete&#10;">
       <created>1496567140641</created>
@@ -435,14 +365,21 @@
       <option name="project" value="LOCAL" />
       <updated>1496567140641</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="use other's html templete&#10;增加了登录、注册的功能模块">
+      <created>1496753725611</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496753725611</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54682000" />
+    <option name="totallyTimeSpent" value="54978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -479,7 +416,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="use other's html templete&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="use other's html templete&#10;" />
+    <MESSAGE value="use other's html templete&#10;增加了登录、注册的功能模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="use other's html templete&#10;增加了登录、注册的功能模块" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
