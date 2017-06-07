@@ -19,6 +19,7 @@ if ($result['status'] != Constant::$_CORRECT) {
     exit;
 }
 $result['groupof'] = $_COOKIE['__groupof'];
+$result['username'] = $_COOKIE['__username'];
 //验证token是否正确
 $result['status'] = is_token_exist($_COOKIE['__token']);
 

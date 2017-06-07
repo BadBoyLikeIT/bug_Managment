@@ -22,7 +22,7 @@ if ($result['status'] != Constant::$_CORRECT) {
 
 $result['status'] = check_username_password($result);
 $result['status'] = check_groupof($result['username']);
-$result['groupof']=getGroup($result['username']);
+$result['groupof']= getGroup($result['username']);
 if ($result['status'] != Constant::$_CORRECT) {
     echo json_encode($result);
     exit;

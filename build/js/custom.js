@@ -2247,7 +2247,7 @@ if (typeof NProgress != 'undefined') {
 				  "Blue Color"
 				],
 				datasets: [{
-				  data: [120, 50, 140, 180, 100],
+				  data: [100, 100, 100, 100, 100],
 				  backgroundColor: [
 					"#455C73",
 					"#9B59B6",

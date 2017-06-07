@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bug Management System 1.0 | </title>
+    <title>Bug Management System 1.0 </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,16 +17,6 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-    <!-- starrr -->
-    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -39,7 +29,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Bug Management System 1.0</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -49,7 +39,7 @@
                     <div class="profile_pic">
                         <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                     </div>
-                    <div id='username1'class="profile_info">
+                    <div id='username1' class="profile_info">
 
                     </div>
                 </div>
@@ -190,7 +180,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
-                            <a href="javascript:;"id="username2" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <a id="username2" href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -281,7 +271,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Form Elements</h3>
+                        <h3>BUG 总览</h3>
                     </div>
 
                     <div class="title_right">
@@ -295,14 +285,14 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="clearfix"></div>
 
-
                 <div class="row">
-                    <div class="col-md-12 col-xs-12">
+                    <div class="col-md-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>项目发布</h2>
+                                <h2>基本信息</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -321,71 +311,27 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <!-- start form for validation -->
-                                <form class="form-horizontal form-label-left" id="project_submit">
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3" for="project_name">项目名称<span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-7">
-                                            <input type="text" id="project_name" name="project" required="required" class="form-control col-md-7 col-xs-12">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3" for="date">发布日期<span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-7">
-                                            <input type="date" id="date" name="date" value="2017-06-01" required="required" class="form-control col-md-7 col-xs-12">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="leader" class="control-label col-md-3" for="project_name">项目负责人<span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-7">
-                                            <select id="leader" class="form-control" name="leader" required class="form-control col-md-7 col-xs-12">
-                                                <option value="JAMES">JAMES</option>
-                                                <option value="LISA">LISA</option>
-                                                <option value="PAUL">PAUL</option>
-                                                <option value="DAVID">DAVID</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="leader" class="control-label col-md-3" for="description">项目描述<span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-7">
-                                        <label for="description">Message (20 chars min, 100 max) :</label>
-                                        <textarea id="description" name="description" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                              data-parsley-validation-threshold="10"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3" for="version_name">版本名称<span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-7">
-                                            <input type="text" id="version_name" name="version" required="required" class="form-control col-md-7 col-xs-12">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="leader" class="control-label col-md-3" for="project_name">项目描述<span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-7">
-                                            <label for="description1">Message (20 chars min, 100 max) :</label>
-                                            <textarea id="description1" name="description1" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                                      data-parsley-validation-threshold="10"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="ln_solid"></div>
-                                    <div class="form-group" style="align-content: center">
-                                        <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-3">
-                                            <button class="btn btn-primary" type="button">Cancel</button>
-                                            <button class="btn btn-primary" type="reset">Reset</button>
-                                            <button type="submit" class="btn btn-success">Submit</button>
-                                        </div>
-                                    </div>
+                                <!-- start project list -->
+                                <table class="table table-striped projects">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 1%">id</th>
+                                        <th style="width: 20%">BUG名称</th>
+                                        <th>项目名称</th>
+                                        <th>版本号</th>
+                                        <th>BUG等级</th>
+                                        <th>Status</th>
+                                        <th>归属者</th>
+                                        <th style="width: 20%">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="bug_show_table">
 
-                                </form>
 
-                                <!-- end form for validations -->
+                                    </tbody>
+                                </table>
+                                <!-- end project list -->
+
                             </div>
                         </div>
                     </div>
@@ -415,38 +361,14 @@
 <script src="../vendors/nprogress/nprogress.js"></script>
 <!-- bootstrap-progressbar -->
 <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<!-- iCheck -->
-<script src="../vendors/iCheck/icheck.min.js"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="../vendors/moment/min/moment.min.js"></script>
-<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- bootstrap-wysiwyg -->
-<script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-<script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-<script src="../vendors/google-code-prettify/src/prettify.js"></script>
-<!-- jQuery Tags Input -->
-<script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-<!-- Switchery -->
-<script src="../vendors/switchery/dist/switchery.min.js"></script>
-<!-- Select2 -->
-<script src="../vendors/select2/dist/js/select2.full.min.js"></script>
-<!-- Parsley -->
-<script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
-<!-- Autosize -->
-<script src="../vendors/autosize/dist/autosize.min.js"></script>
-<!-- jQuery autocomplete -->
-<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-<!-- starrr -->
-<script src="../vendors/starrr/dist/starrr.js"></script>
+
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
-
-<!--funjs-->
+<!--myfunction-->
 <script src="../funjs/jquery.prettyPhoto.js"></script>
 <script src="../funjs/main.js"></script>
 <script src="../funjs/com.fun.js"></script>
-<script src="../funjs/porject_submit.js"></script>
+<script src="../funjs/bug_show.js"></script>
 <script src="js/sweetalert.min.js"></script>
-
 </body>
 </html>

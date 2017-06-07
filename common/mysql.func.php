@@ -59,6 +59,8 @@ function attemptLogin($value1, $value2)
     $con->close();
     return $isExist;
 }
+
+
 function getGroup($username)
 {
     $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
@@ -74,7 +76,7 @@ function getGroup($username)
 
     while ($stmt->fetch()) {
         $result = $groupof;
-
+//$result会存在隐患
     }
     $stmt->close();
     $con->close();
@@ -114,6 +116,164 @@ function addUser($token, $name, $password, $work_num,$groupof,$department,$workd
     return $affected_rows == 1 ? true : false;
 }
 
+function getLeaderId($name)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `id` FROM `tb_user` WHERE `username` = ? LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("s",  $name);
+    $stmt->execute();
+
+    $stmt->store_result();
+    $stmt->bind_result($id);
+
+
+    while ($stmt->fetch()) {
+        $result = $id;
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+function getLeaderName_id($id)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `username` FROM `tb_user` WHERE `id` = ? LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("i",  $id);
+    $stmt->execute();
+
+    $stmt->store_result();
+    $stmt->bind_result($name);
+
+
+    while ($stmt->fetch()) {
+        $result = $name;
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+function getLeaderName($name)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `leader_id` FROM `tb_project` WHERE `title` = ? LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("s",  $name);
+    $stmt->execute();
+
+    $stmt->store_result();
+    $stmt->bind_result($id);
+
+    $result = null;
+    while ($stmt->fetch()) {
+        $result = $id;
+    }
+    $result = getLeaderName_id($result);
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+function getProjectId($name)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `id` FROM `tb_project` WHERE `title` = ? LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("s",  $name);
+    $stmt->execute();
+
+    $stmt->store_result();
+    $stmt->bind_result($id);
+
+
+    while ($stmt->fetch()) {
+        $result = $id;
+
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+function getVersionId($name)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `id` FROM `tb_version` WHERE `title` = ? LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("s",  $name);
+    $stmt->execute();
+
+    $stmt->store_result();
+    $stmt->bind_result($id);
+
+
+    while ($stmt->fetch()) {
+        $result = $id;
+
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+
+
+function addProject($project_name, $description, $leader, $date)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $leader_id = getLeaderId($leader);
+    $sql = "INSERT INTO `tb_project` (
+                    `leader_id`,
+                    `title`,
+                    `description`,
+                    `date`
+              ) VALUE (?, ?, ?, ?)";
+
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("isss", $leader_id, $project_name, $description,$date );
+    $stmt->execute();
+
+    $affected_rows = $stmt->affected_rows;
+    $stmt->close();
+    $con->close();
+    return $affected_rows == 1 ? true : false;
+}
+function addBug($project, $version, $title, $date, $status, $class , $description, $testName,$imgPath)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $leaderName = getLeaderName($project);
+    $sql = "INSERT INTO `tb_bug` (
+                    `p_name`,
+                    `v_name`,
+                    `title`,
+                    `publish_time`,
+                    `status`,
+                    `class`,
+                    `description`,
+                    `tester_name`,
+                    `developer_name`,
+                    `img_path`
+              ) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("ssssssssss", $project, $version, $title, $date, $status, $class , $description, $testName,$leaderName,$imgPath);
+    $stmt->execute();
+
+    $affected_rows = $stmt->affected_rows;
+    $stmt->close();
+    $con->close();
+    return $affected_rows == 1 ? true : false;
+}
 /**
  * @param $token //__token
  * @return bool //token 是否存在
@@ -298,44 +458,135 @@ function getProjectCount()
     $con->close();
     return $count;
 }
+//function getName($tbname,$id)
+//{
+//    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+//    $con->query("SET NAMES UTF8;");
+//    $sql = "SELECT `username` FROM ? WHERE `title` = ? LIMIT 1";
+//    $stmt = $con->prepare($sql);
+//    $stmt->bind_param("ss",  $tbname,$id);
+//    $stmt->execute();
+//
+//    $stmt->store_result();
+//    $stmt->bind_result($name);
+//
+//
+//    while ($stmt->fetch()) {
+//        $result = $name;
+//
+//    }
+//    $stmt->close();
+//    $con->close();
+//    return $result;
+//
+//}
+function getName($id)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `username` FROM `tb_user` WHERE `id` = ? LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("i",$id);
+    $stmt->execute();
 
+    $stmt->store_result();
+    $stmt->bind_result($name);
+
+
+    while ($stmt->fetch()) {
+        $result = $name;
+
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+function getVersionCurrentName($p_id)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `title` FROM `tb_version` WHERE `p_id` = ? ORDER BY `id` DESC LIMIT 1";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("s",$p_id);
+    $stmt->execute();
+
+    $stmt->store_result();
+    $stmt->bind_result($VersionCurrentName);
+
+    $result = null;
+    while ($stmt->fetch()) {
+        $result = $VersionCurrentName;
+
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+
+}
+//这个地方可以修改一部分
 /**
  * @param $start //查询起始
  * @param $num //查询数目
  * @return array    //返回项目信息
  */
-function getProjectInfo($start, $num)
+function getProjectInfo()
 {
     $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
     $con->query("SET NAMES UTF8;");
-    $sql = "SELECT `id`, `acpname`, `acpcity`, `acpdate`, `acpday`, `acptheme`, `acpbright`, `acpmean`, `acpdetail`, 
-`acptip`, `acppicture`, `acppushdate`, `acpistop` FROM `tb_project` LIMIT ?, ?";
+    $sql = "SELECT `id`, `title`, `leader_id`, `description`, `date` FROM `tb_project`";
     $stmt = $con->prepare($sql);
-    $stmt->bind_param("ii", $start, $num);
     $stmt->execute();
-
     $stmt->store_result();
-    $stmt->bind_result($id, $name, $city, $date, $day, $theme, $bright, $mean, $detail, $tip, $picture, $push_date,
-        $is_top);
+    $stmt->bind_result($id, $name, $leader_id, $description, $date);
 
     $result = array();
+    //$result['status'] = false;
+    $index = 0;
     while ($stmt->fetch()) {
+        //$result['status'] = true;
         $item = array();
         $item['id'] = $id;
         $item['name'] = $name;
-        $item['city'] = $city;
+        $item['leader_id'] = $leader_id;
+        $item['leader_name'] = getName($leader_id);
+        $item['version'] = getVersionCurrentName($id);
+        $item['description'] = $description;
         $item['date'] = $date;
-        $item['day'] = $day;
-        $item['theme'] = $theme;
-        $item['bright'] = $bright;
-        $item['mean'] = $mean;
-        $item['detail'] = $detail;
-        $item['tip'] = $tip;
-        $item['picture'] = $picture;
-        $item['push_date'] = $push_date;
-        $item['is_top'] = $is_top;
 
-        $result[$id] = $item;
+        $result[$index]=$item;
+        $index++;
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+}
+function getBugInfo()
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `id`, `title`, `p_name`, `v_name`, `class`, `status`, `developer_name` FROM `tb_bug`";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result($id, $title, $p_name, $v_name, $class,$status,$developer_name);
+
+    $result = array();
+    //$result['status'] = false;
+    $index = 0;
+    while ($stmt->fetch()) {
+        //$result['status'] = true;
+        $item = array();
+        $item['id'] = $id;
+        $item['title'] = $title;
+        $item['p_name'] = $p_name;
+        $item['v_name'] = $v_name;
+        $item['class'] = $class;
+        $item['status'] = $status;
+        $item['developer_name'] = $developer_name;
+
+        $result[$index]=$item;
+        $index++;
     }
     $stmt->close();
     $con->close();
