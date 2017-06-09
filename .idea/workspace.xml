@@ -2,67 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55320ab4-3650-48b9-b979-cca0dad88c19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/bug.show.info.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/bug.solve.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/logout.con.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/bug_show_info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funjs/profile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/bug_show_info.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/desktop-1756727__340.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/chartjs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/chartjs2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/contacts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/e_commerce.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/echarts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/fixed_footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/fixed_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/form_advanced.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/form_buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/form_upload.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/form_validation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/form_wizards.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/general_elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/glyphicons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/icons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/inbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/index2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/index3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/invoice.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/level2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/map.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/media_gallery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/morisjs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/other_charts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/page_403.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/page_404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/page_500.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/plain_page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/pricing_tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/project_detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/projects.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/tables_dynamic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/typography.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/widgets.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/xx.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/mysql.func.php" afterPath="$PROJECT_DIR$/common/mysql.func.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/register.con.php" afterPath="$PROJECT_DIR$/controller/register.con.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funjs/bug_show.js" afterPath="$PROJECT_DIR$/funjs/bug_show.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funjs/bug_submit.js" afterPath="$PROJECT_DIR$/funjs/bug_submit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funjs/porject_submit.js" afterPath="$PROJECT_DIR$/funjs/porject_submit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funjs/project_show.js" afterPath="$PROJECT_DIR$/funjs/project_show.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funjs/register.js" afterPath="$PROJECT_DIR$/funjs/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/bug_show.html" afterPath="$PROJECT_DIR$/production/bug_show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/bug_submit.html" afterPath="$PROJECT_DIR$/production/bug_submit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/index.html" afterPath="$PROJECT_DIR$/production/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/login.html" afterPath="$PROJECT_DIR$/production/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/profile.html" afterPath="$PROJECT_DIR$/production/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/project_show.html" afterPath="$PROJECT_DIR$/production/project_show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/project_submit.html" afterPath="$PROJECT_DIR$/production/project_submit.html" />
     </list>
     <ignored path="gentelella.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -368,7 +308,7 @@
       <workItem from="1496989219964" duration="1099000" />
       <workItem from="1496997299395" duration="1216000" />
       <workItem from="1496999788892" duration="725000" />
-      <workItem from="1497000887520" duration="5000" />
+      <workItem from="1497000887520" duration="265000" />
     </task>
     <task id="LOCAL-00001" summary="use other's html templete&#10;">
       <created>1496567140641</created>
@@ -384,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496753725611</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="实现了项目模块(提交、显示)、实现了bug模块(bug提交、bug列表显示、bug详情显示、bug解决)、用户模块(注册模块、登录模块);">
+      <created>1497001147792</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1497001147792</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138081000" />
+    <option name="totallyTimeSpent" value="138341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -429,7 +376,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="use other's html templete&#10;" />
     <MESSAGE value="use other's html templete&#10;增加了登录、注册的功能模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="use other's html templete&#10;增加了登录、注册的功能模块" />
+    <MESSAGE value="实现了项目模块(提交、显示)、实现了bug模块(bug提交、bug列表显示、bug详情显示、bug解决)、用户模块(注册模块、登录模块);" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了项目模块(提交、显示)、实现了bug模块(bug提交、bug列表显示、bug详情显示、bug解决)、用户模块(注册模块、登录模块);" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -510,6 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13500">
           <caret line="500" column="16" selection-start-line="500" selection-start-column="16" selection-end-line="500" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -694,6 +643,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="37" column="88" selection-start-line="37" selection-start-column="88" selection-end-line="37" selection-end-column="110" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -701,6 +651,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="149" column="137" selection-start-line="149" selection-start-column="137" selection-end-line="149" selection-end-column="137" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,6 +659,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="160" column="130" selection-start-line="160" selection-start-column="130" selection-end-line="160" selection-end-column="130" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,6 +681,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="206" column="30" selection-start-line="206" selection-start-column="30" selection-end-line="206" selection-end-column="30" />
+          <folding>
+            <element signature="n#isExist#0;n#!!top" expanded="false" />
+            <element signature="n#attemptLogin#0;n#!!top" expanded="false" />
+            <element signature="n#getGroup#0;n#!!top" expanded="false" />
+            <element signature="n#addUser#0;n#!!top" expanded="false" />
+            <element signature="n#getLeaderName_id#0;n#!!top" expanded="false" />
+            <element signature="n#getProjectId#0;n#!!top" expanded="false" />
+            <element signature="n#addVersion#0;n#!!top" expanded="false" />
+            <element signature="n#checkToken#0;n#!!top" expanded="false" />
+            <element signature="n#getUserInfo#0;n#!!top" expanded="false" />
+            <element signature="n#getUserApply#0;n#!!top" expanded="false" />
+            <element signature="n#submitApply#0;n#!!top" expanded="false" />
+            <element signature="n#getProjectCount#0;n#!!top" expanded="false" />
+            <element signature="n#getName#0;n#!!top" expanded="false" />
+            <element signature="n#getVersionCurrentName#0;n#!!top" expanded="false" />
+            <element signature="n#getProjectInfo#0;n#!!top" expanded="false" />
+            <element signature="n#getBugInfo#0;n#!!top" expanded="false" />
+            <element signature="n#getBugSingleInfo#0;n#!!top" expanded="false" />
+            <element signature="n#checkPassword#0;n#!!top" expanded="false" />
+            <element signature="n#updateUserInfo#0;n#!!top" expanded="false" />
+            <element signature="n#updateBug#0;n#!!top" expanded="false" />
+            <element signature="n#getProjectDetail#0;n#!!top" expanded="false" />
+            <marker date="1497000523566" expanded="true" signature="312:367" ph="SELECT `id` tb_user" />
+            <marker date="1497000523566" expanded="true" signature="903:977" ph="SELECT `id` tb_user" />
+            <marker date="1497000523566" expanded="true" signature="1471:1531" ph="SELECT `grou... tb_user" />
+            <marker date="1497000523566" expanded="true" signature="2172:2457" ph="INSERT INTO `tb_user`... " />
+            <marker date="1497000523566" expanded="true" signature="2891:2946" ph="SELECT `id` tb_user" />
+            <marker date="1497000523566" expanded="true" signature="3362:3417" ph="SELECT `user... tb_user" />
+            <marker date="1497000523566" expanded="true" signature="3853:3915" ph="SELECT `lead... tb_project" />
+            <marker date="1497000523566" expanded="true" signature="4389:4444" ph="SELECT `id` tb_project" />
+            <marker date="1497000523566" expanded="true" signature="4913:4968" ph="SELECT `id` tb_version" />
+            <marker date="1497000523566" expanded="true" signature="5494:5679" ph="INSERT INTO `tb_project`... " />
+            <marker date="1497000523566" expanded="true" signature="6175:6355" ph="INSERT INTO `tb_version`... " />
+            <marker date="1497000523566" expanded="true" signature="6879:7276" ph="INSERT INTO `tb_bug`... " />
+            <marker date="1497000523566" expanded="true" signature="7807:7859" ph="SELECT `id` tb_user" />
+            <marker date="1497000523566" expanded="true" signature="8405:8512" ph="SELECT `user... tb_user" />
+            <marker date="1497000523566" expanded="true" signature="9172:9265" ph="SELECT `id`,... tb_apply" />
+            <marker date="1497000523566" expanded="true" signature="10177:11264" ph="INSERT INTO `tb_apply`... " />
+            <marker date="1497000523566" expanded="true" signature="12539:12565" ph="SELECT * FRO... tb_project" />
+            <marker date="1497000523566" expanded="true" signature="12875:12930" ph="SELECT `user... tb_user" />
+            <marker date="1497000523566" expanded="true" signature="13373:13449" ph="SELECT `titl... tb_version" />
+            <marker date="1497000523566" expanded="true" signature="14007:14081" ph="SELECT `id`,... tb_project" />
+            <marker date="1497000523566" expanded="true" signature="14931:15022" ph="SELECT `id`,... tb_bug" />
+            <marker date="1497000523566" expanded="true" signature="15866:16033" ph="SELECT `titl... tb_bug" />
+            <marker date="1497000523566" expanded="true" signature="17226:17266" ph="SELECT `id`,... tb_project" />
+            <marker date="1497000523566" expanded="true" signature="17880:17940" ph="SELECT * FRO... tb_user" />
+            <marker date="1497000523566" expanded="true" signature="18458:18541" ph="UPDATE `tb_u... " />
+            <marker date="1497000523566" expanded="true" signature="18970:19072" ph="UPDATE `tb_b... " />
+            <marker date="1497000523566" expanded="true" signature="19591:19632" ph="SELECT * FRO... tb_project" />
+          </folding>
         </state>
       </provider>
     </entry>
