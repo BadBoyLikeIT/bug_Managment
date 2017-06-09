@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BUG_M_Sys 1.0 </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Bug Management </span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div id="username1" class="profile_info">
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br/>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <ul class="nav side-menu">
+                            <li><a href="index.html"><i class="fa fa-home"></i> Home </a></li>
+                            <li><a><i class="fa fa-rocket"></i> Project <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="project_submit.html">Publish</a></li>
+                                    <li><a href="project_show.html">Display</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-bug"></i> Bug <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="bug_submit.html">Submit</a></li>
+                                    <li><a href="bug_show.html">Display</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="profile.html"><i class="fa fa-user-md"></i> Profile </a></li>
+                            <li id="cu-logout"><a href="#"><i class="fa fa-sign-out"></i> Logout </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /sidebar menu -->
+
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>BUG Detail</h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!--传递参数使用------------------------------------------------------------------------------------------------------->
+                <form id="BugId">
+                    <input id="bug-id" type="hidden" name="slider_id" value="">
+                </form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>BUG 详细信息</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content">
+
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+
+                                    <ul class="stats-overview">
+                                        <li id="project">
+
+                                        </li>
+                                        <li id="version">
+
+                                        </li>
+                                        <li class="hidden-phone" id="bug">
+
+                                        </li>
+                                    </ul>
+                                    <br />
+
+                                    <div id="bug_pic"></div>
+
+                                    <div>
+
+                                        <h4>Recent Activity</h4>
+
+                                        <!-- end of user messages -->
+                                        <ul class="messages">
+                                            <li>
+                                                <img src="images/img.jpg" class="avatar" alt="Avatar">
+                                                <div class="message_wrapper" id="tester">
+
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="images/img.jpg" class="avatar" alt="Avatar">
+
+                                                <div class="message_wrapper" id="leader">
+
+                                                </div>
+                                            </li>
+                                            <!--<li>-->
+                                                <!--<img src="images/img.jpg" class="avatar" alt="Avatar">-->
+                                                <!--<div class="message_date">-->
+                                                    <!--<h3 class="date text-info">24</h3>-->
+                                                    <!--<p class="month">May</p>-->
+                                                <!--</div>-->
+                                                <!--&lt;!&ndash;<div class="message_wrapper">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<h4 class="heading">Desmond Davison</h4>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<br />&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<p class="url">&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<span class="fs1 text-info" aria-hidden="true" data-icon=""></span>&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                            <!--</li>-->
+                                        </ul>
+                                        <!-- end of user messages -->
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <!-- start project-detail sidebar -->
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                    <section class="panel">
+
+                                        <div class="x_title">
+                                            <h2>BUG 描述</h2>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <h3 class="green"><i class="fa fa-paint-brush"></i> Description</h3>
+
+                                            <p id="description">
+
+                                            </p>
+
+
+                                            <br />
+
+
+                                            <div class="text-center mtop20">
+                                                <button  class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                                                    解决
+                                                </button>
+                                                <!--<a href="#" class="btn btn-sm btn-primary">解决</a>-->
+                                                <a href="#" class="btn btn-sm btn-warning">指派</a>
+                                            </div>
+                                        </div>
+
+                                    </section>
+
+                                </div>
+                                <!-- end project-detail sidebar -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">解决方案</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form role="form"id="model-form" method="post" enctype="multipart/form-data">
+
+                                                    <div class="form-group">
+                                                        <label>解决BUG信息</label>
+                                                        <input type="text" id="description1" class="form-control" name="description1"  placeholder="描述" >
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="picture">BUG修改后的截图</label>
+                                                        <input type="file" name = "picture" id="picture">
+                                                    </div>
+                                                    <!--<button type="submit" id="submitimg" onclick="checkimg()"class="btn btn-primary">确认修改</button>-->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                                        <button type="submit" id="submitimg" class="btn btn-primary">提交</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Bug Management System 1.0
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- ECharts -->
+<script src="../vendors/echarts/dist/echarts.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+<!--myfunction-->
+<script src="../funjs/jquery.prettyPhoto.js"></script>
+<script src="../funjs/main.js"></script>
+<script src="../funjs/com.fun.js"></script>
+<script src="../funjs/bug_show_info.js"></script>
+<script src="js/sweetalert.min.js"></script>
+</body>
+</html>

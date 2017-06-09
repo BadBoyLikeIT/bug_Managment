@@ -66,7 +66,7 @@ $(document).ready(function () {
                         case 1:
                             if(result[item]['status'] == "isActive"){
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -74,14 +74,14 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-success btn-xs">'+'isActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
                                     '</tr>';}
                             else {
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -89,7 +89,7 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-danger btn-xs">'+'NoActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
@@ -98,7 +98,7 @@ $(document).ready(function () {
                         case 2:
                             if(result[item]['status'] == "isActive"){
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -106,14 +106,14 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-success btn-xs">'+'isActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
                                     '</tr>';}
                             else {
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -121,7 +121,7 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-danger btn-xs">'+'NoActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
@@ -130,7 +130,7 @@ $(document).ready(function () {
                         case 3:
                             if(result[item]['status'] == "isActive"){
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -138,14 +138,14 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-success btn-xs">'+'isActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
                                     '</tr>';}
                             else {
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -153,7 +153,7 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-danger btn-xs">'+'NoActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
@@ -162,7 +162,7 @@ $(document).ready(function () {
                         case 4:
                             if(result[item]['status'] == "isActive"){
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -170,14 +170,14 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-success btn-xs">'+'isActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
                                     '</tr>';}
                             else {
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -185,7 +185,7 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-danger btn-xs">'+'NoActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
@@ -194,7 +194,7 @@ $(document).ready(function () {
                         case 5:
                             if(result[item]['status'] == "isActive"){
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -202,14 +202,14 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-success btn-xs">'+'isActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
                                     '</tr>';}
                             else {
                                 html += '<tr>' +
-                                    '<td>' + result[item]['id'] +'</td>' +
+                                    '<td class="id">' + result[item]['id'] +'</td>' +
                                     '<td>'+'<a>'+result[item]['title']+'<a>'+'</td>' +
                                     '<td>'+result[item]['p_name']+'</td>' +
                                     '<td>'+result[item]['v_name']+'</td>' +
@@ -217,7 +217,7 @@ $(document).ready(function () {
                                     '<td>'+'<button type="button" class="btn btn-danger btn-xs">'+'NoActive'+'</button>'+'</td>' +
                                     '<td>'+result[item]['developer_name']+'</td>'+
                                     '<td>'+
-                                    '<a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+                                    '<Button href="#" class="btn btn-primary btn-xs" onClick="jump_BugInfo(this)"><i class="fa fa-folder"></i> View </Button>'+
                                     '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
                                     '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
                                     '</td>' +
@@ -233,7 +233,30 @@ $(document).ready(function () {
             }
         }
     });
+    $("#cu-logout").click(function () {
+        $.ajax({
+            url: "/bug/controller/logout.con.php",
+            success: function (data) {
+                var result = JSON.parse(data);
 
-
+                if (result.status == CORRECT) {
+                    location.href = "/bug/production/login.html";
+                }
+            }
+        })
+    });
 
 });
+
+
+//如何获取表格的当前行对应列的(通过id)值
+function jump_BugInfo(obj)
+{
+    var bugId = $(obj).parents("tr").find(".id").text();
+    // alert(bugId);
+    console.log(bugId);
+    location.href= "/bug/production/bug_show_info.html?id="+bugId;
+    
+}
+
+//一个界面给另一个界面传递参数可以利用get方法

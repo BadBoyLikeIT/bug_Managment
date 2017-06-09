@@ -80,4 +80,5 @@ $(document).ready(function () {
     $("#password_confirm").blur(function () {
         checkPasswordConfirm($(this).val(), $("#password").val());
     });
+
 });

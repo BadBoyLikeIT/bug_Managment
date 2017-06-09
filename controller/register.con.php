@@ -99,9 +99,10 @@ function is_username_repeat($username)
 //新增用户
 function add_user($result)
 {
+    if (addUser($result['token'], $result['username'], $result['password'], $result['work_num'],
+        $result['groupof'], $result['department'] , $result['workdate'] ))
+        return Constant::$_CORRECT;
+    else
+        return Constant::$_DB_INSERT_ERROR;
 
-}if (addUser($result['token'], $result['username'], $result['password'], $result['work_num'],
-    $result['groupof'], $result['department'] , $result['workdate'] ))
-    return Constant::$_CORRECT;
-else
-    return Constant::$_DB_INSERT_ERROR;
+}

@@ -149,7 +149,7 @@ function getLeaderName_id($id)
     $stmt->store_result();
     $stmt->bind_result($name);
 
-
+    $result = null;
     while ($stmt->fetch()) {
         $result = $name;
     }
@@ -202,28 +202,33 @@ function getProjectId($name)
     return $result;
 
 }
-function getVersionId($name)
-{
-    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
-    $con->query("SET NAMES UTF8;");
-    $sql = "SELECT `id` FROM `tb_version` WHERE `title` = ? LIMIT 1";
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("s",  $name);
-    $stmt->execute();
 
-    $stmt->store_result();
-    $stmt->bind_result($id);
-
-
-    while ($stmt->fetch()) {
-        $result = $id;
-
-    }
-    $stmt->close();
-    $con->close();
-    return $result;
-
-}
+/*
+ * 因为Version的title不唯一，所以不能作为索引
+ *
+ * */
+//function getVersionId($name)
+//{
+//    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+//    $con->query("SET NAMES UTF8;");
+//    $sql = "SELECT `id` FROM `tb_version` WHERE `title` = ? LIMIT 1";
+//    $stmt = $con->prepare($sql);
+//    $stmt->bind_param("s",  $name);
+//    $stmt->execute();
+//
+//    $stmt->store_result();
+//    $stmt->bind_result($id);
+//
+//
+//    while ($stmt->fetch()) {
+//        $result = $id;
+//
+//    }
+//    $stmt->close();
+//    $con->close();
+//    return $result;
+//
+//}
 
 
 function addProject($project_name, $description, $leader, $date)
@@ -247,6 +252,30 @@ function addProject($project_name, $description, $leader, $date)
     $con->close();
     return $affected_rows == 1 ? true : false;
 }
+
+
+function addVersion($project_name, $version_name, $description, $date)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $p_id = getProjectId($project_name);
+    $sql = "INSERT INTO `tb_version` (
+                    `p_id`,
+                    `title`,
+                    `description`,
+                    `date`
+              ) VALUE (?, ?, ?, ?)";
+
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("isss", $p_id, $version_name, $description,$date );
+    $stmt->execute();
+
+    $affected_rows = $stmt->affected_rows;
+    $stmt->close();
+    $con->close();
+    return $affected_rows == 1 ? true : false;
+}
+
 function addBug($project, $version, $title, $date, $status, $class , $description, $testName,$imgPath)
 {
     $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
@@ -458,28 +487,7 @@ function getProjectCount()
     $con->close();
     return $count;
 }
-//function getName($tbname,$id)
-//{
-//    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
-//    $con->query("SET NAMES UTF8;");
-//    $sql = "SELECT `username` FROM ? WHERE `title` = ? LIMIT 1";
-//    $stmt = $con->prepare($sql);
-//    $stmt->bind_param("ss",  $tbname,$id);
-//    $stmt->execute();
-//
-//    $stmt->store_result();
-//    $stmt->bind_result($name);
-//
-//
-//    while ($stmt->fetch()) {
-//        $result = $name;
-//
-//    }
-//    $stmt->close();
-//    $con->close();
-//    return $result;
-//
-//}
+
 function getName($id)
 {
     $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
@@ -492,7 +500,7 @@ function getName($id)
     $stmt->store_result();
     $stmt->bind_result($name);
 
-
+    $result = null;
     while ($stmt->fetch()) {
         $result = $name;
 
@@ -592,6 +600,43 @@ function getBugInfo()
     $con->close();
     return $result;
 }
+function getBugSingleInfo($id)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "SELECT `title`, `p_name`, `v_name`, `class`, `status`, `developer_name` ,`description`,`tester_name`,`publish_time`,`solve_time`,`img_path`FROM `tb_bug` WHERE `id` = ? ";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result( $title, $p_name, $v_name, $class,$status,$developer_name,$description,$tester_name,$publish_time,$solve_time,$img_path);
+
+    $result = array();
+    //$result['status'] = false;
+    //这个地方导致是一个二维数组
+    $index = 0;
+    while ($stmt->fetch()) {
+        //$result['status'] = true;
+        $item = array();
+        $item['title'] = $title;
+        $item['p_name'] = $p_name;
+        $item['v_name'] = $v_name;
+        $item['class'] = $class;
+        $item['status'] = $status;
+        $item['developer_name'] = $developer_name;
+        $item['description'] = $description;
+        $item['tester_name'] = $tester_name;
+        $item['publish_time'] = $publish_time;
+        $item['solve_time'] = $solve_time;
+        $item['img_path'] = $img_path;
+
+        $result[$index]=$item;
+        $index++;
+    }
+    $stmt->close();
+    $con->close();
+    return $result;
+}
 
 /**
  * @return array 为报名表页面获取项目的ID和名称列表
@@ -656,6 +701,24 @@ function updateUserInfo($old_token, $name, $pwd, $token)
 WHERE `token` = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param("ssss", $token, $name, $pwd, $old_token);
+
+    $stmt->execute();
+    $stmt->store_result();
+    $affected_rows = $stmt->affected_rows;
+
+    $stmt->close();
+    $con->close();
+    return $affected_rows;
+}
+function updateBug($id, $description, $img_path,$date)
+{
+    $con = mysqli_connect(DB_HOST, DB_USER, DB_PWD, DB_NAME);
+    $con->query("SET NAMES UTF8;");
+    $sql = "UPDATE `tb_bug` SET `description` = ?, `img_path` = ?, `status` = ? , `solve_time` = ? 
+WHERE `id` = ?";
+    $stmt = $con->prepare($sql);
+    $status = 'noActive';
+    $stmt->bind_param("ssssi", $description, $img_path, $status, $date,$id);
 
     $stmt->execute();
     $stmt->store_result();

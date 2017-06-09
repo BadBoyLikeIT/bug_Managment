@@ -100,7 +100,18 @@ $(document).ready(function () {
             }
         }
     });
+    $("#cu-logout").click(function () {
+        $.ajax({
+            url: "/bug/controller/logout.con.php",
+            success: function (data) {
+                var result = JSON.parse(data);
 
+                if (result.status == CORRECT) {
+                    location.href = "/bug/production/login.html";
+                }
+            }
+        })
+    });
 
 
 });
